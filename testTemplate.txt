@@ -1,0 +1,17 @@
+class {{print className,}}({{print ", ".join([base for base  in bases]), }}):
+
+        """docstring for {{print className,}}"""
+        def __init__(self,  {{print ", ".join([attribute for attribute  in attributes]), }}):
+                super({{print className, }}, self).__init__()
+{{
+for attribute in  attributes: 
+	print """\t\tself.%s = %s""" % (attribute , attribute)
+}}
+
+{{
+for method in  methods: 
+        print '\t"""docstring for %s """' % method
+	print """\tdef %s(self,):\n\t\tpass""" % method
+	print
+}}
+
