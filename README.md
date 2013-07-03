@@ -44,3 +44,5 @@
 		"""docstring for add """
 		def add(self,):
 			pass
+### Still to do.
+	The context variables are hard coded the evaluate() method of the TemplateHandler class. This has to come from outside. 
